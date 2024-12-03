@@ -11,7 +11,7 @@ def main(page: ft.Page):
             [
                 ft.Container(
                     content=ft.Image(
-                        src="./images/home-image.jpg",  
+                        src="static/images/home-image.jpg",
                         width=100,  
                         height=100,  
                         fit=ft.ImageFit.COVER,  
@@ -89,7 +89,7 @@ def main(page: ft.Page):
                     controls=[
                         ft.Container(
                             content=ft.Image(
-                                src="images/friendOne.jpg",  
+                                src="static/images/friendOne.jpg",  
                                 width=50,  
                                 height=50,  
                                 fit=ft.ImageFit.COVER,  
@@ -98,7 +98,7 @@ def main(page: ft.Page):
                         ),
                         ft.Container(
                             content=ft.Image(
-                                src="images/friendTwo.jpg",  
+                                src="static/images/friendTwo.jpg",  
                                 width=50,  
                                 height=50,  
                                 fit=ft.ImageFit.COVER,
@@ -107,7 +107,7 @@ def main(page: ft.Page):
                         ),
                         ft.Container(
                             content=ft.Image(
-                                src="images/friendThree.jpg",  
+                                src="static/images/friendThree.jpg",  
                                 width=50,  
                                 height=50,  
                                 fit=ft.ImageFit.COVER,
@@ -139,7 +139,7 @@ def main(page: ft.Page):
                                 content=ft.Row(
                                     [
                                         ft.Image(
-                                            src="images/Event.png",  
+                                            src="static/images/Event.png",  
                                             fit="cover",
                                             width=80,
                                             height=80,
@@ -168,7 +168,7 @@ def main(page: ft.Page):
                                 content=ft.Row(
                                     [
                                         ft.Image(
-                                            src="images/EventTwo.jpg",  
+                                            src="static/images/EventTwo.jpg",  
                                             fit="cover",
                                             width=80,
                                             height=80,
