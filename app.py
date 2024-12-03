@@ -1,17 +1,20 @@
 import flet as ft
+import os
 
 def main(page: ft.Page):
     page.title = "Profile Screen"
     page.padding = 0
     page.scroll = "adaptive"
     page.bgcolor = "#F8F9FA"
+    
+    images_path = "static/images"
 
     profile_header = ft.Container(
         content=ft.Column(
             [
                 ft.Container(
                     content=ft.Image(
-                        src="static/images/home-image.jpg",
+                        src=images_path + "/home-image.jpg",
                         width=100,  
                         height=100,  
                         fit=ft.ImageFit.COVER,  
@@ -89,7 +92,7 @@ def main(page: ft.Page):
                     controls=[
                         ft.Container(
                             content=ft.Image(
-                                src="static/images/friendOne.jpg",  
+                                src=images_path + "/friendOne.jpg",  
                                 width=50,  
                                 height=50,  
                                 fit=ft.ImageFit.COVER,  
@@ -98,7 +101,7 @@ def main(page: ft.Page):
                         ),
                         ft.Container(
                             content=ft.Image(
-                                src="static/images/friendTwo.jpg",  
+                                src=images_path + "/friendTwo.jpg",  
                                 width=50,  
                                 height=50,  
                                 fit=ft.ImageFit.COVER,
@@ -107,7 +110,7 @@ def main(page: ft.Page):
                         ),
                         ft.Container(
                             content=ft.Image(
-                                src="static/images/friendThree.jpg",  
+                                src=images_path + "/friendThree.jpg",  
                                 width=50,  
                                 height=50,  
                                 fit=ft.ImageFit.COVER,
@@ -139,7 +142,7 @@ def main(page: ft.Page):
                                 content=ft.Row(
                                     [
                                         ft.Image(
-                                            src="static/images/Event.png",  
+                                            src=images_path + "/Event.png",  
                                             fit="cover",
                                             width=80,
                                             height=80,
@@ -168,7 +171,7 @@ def main(page: ft.Page):
                                 content=ft.Row(
                                     [
                                         ft.Image(
-                                            src="static/images/EventTwo.jpg",  
+                                            src=images_path + "/EventTwo.jpg",  
                                             fit="cover",
                                             width=80,
                                             height=80,
