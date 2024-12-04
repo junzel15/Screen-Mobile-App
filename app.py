@@ -9,29 +9,30 @@ def main(page: ft.Page):
     
     images_path = "static/images"
 
+   
     profile_header = ft.Container(
         content=ft.Column(
             [
                 ft.Container(
                     content=ft.Image(
-                        src=images_path + "/home-image.jpg",
-                        width=100,  
-                        height=100,  
-                        fit=ft.ImageFit.COVER,  
-                        border_radius=50,  
+                        src=os.path.join(images_path, "home-image.jpg"),
+                        width=100,
+                        height=100,
+                        fit=ft.ImageFit.COVER,
+                        border_radius=50,
                     ),
                     alignment=ft.alignment.center,
                 ),
                 ft.Row(
                     [
-                        ft.Text("CJ Agpaoa", size=20, weight="bold"),
+                        ft.Text("Elvis Bogsangit Jr.", size=20, weight="bold"),
                         ft.Icon(ft.icons.VERIFIED, color="#1DA1F2", size=18),
                     ],
                     alignment="center",
                 ),
                 ft.Container(
                     content=ft.Text(
-                        "Boston, USA",
+                        "Pagadian, Philippines",
                         size=14,
                         color="#6C757D",
                         text_align="center",
@@ -77,6 +78,7 @@ def main(page: ft.Page):
         alignment=ft.alignment.center,
     )
 
+
     friend_list_section = ft.Container(
         content=ft.Column(
             [
@@ -92,29 +94,29 @@ def main(page: ft.Page):
                     controls=[
                         ft.Container(
                             content=ft.Image(
-                                src=images_path + "/friendOne.jpg",  
-                                width=50,  
-                                height=50,  
-                                fit=ft.ImageFit.COVER,  
-                                border_radius=25,  
+                                src=os.path.join(images_path, "friendOne.jpg"),
+                                width=50,
+                                height=50,
+                                fit=ft.ImageFit.COVER,
+                                border_radius=25,
                             ),
                         ),
                         ft.Container(
                             content=ft.Image(
-                                src=images_path + "/friendTwo.jpg",  
-                                width=50,  
-                                height=50,  
+                                src=os.path.join(images_path, "friendTwo.jpg"),
+                                width=50,
+                                height=50,
                                 fit=ft.ImageFit.COVER,
-                                border_radius=25,  
+                                border_radius=25,
                             ),
                         ),
                         ft.Container(
                             content=ft.Image(
-                                src=images_path + "/friendThree.jpg",  
-                                width=50,  
-                                height=50,  
+                                src=os.path.join(images_path, "friendThree.jpg"),
+                                width=50,
+                                height=50,
                                 fit=ft.ImageFit.COVER,
-                                border_radius=25,  
+                                border_radius=25,
                             ),
                         ),
                     ],
@@ -124,6 +126,7 @@ def main(page: ft.Page):
         ),
         padding=15,
     )
+
 
     event_section = ft.Container(
         content=ft.Column(
@@ -142,7 +145,7 @@ def main(page: ft.Page):
                                 content=ft.Row(
                                     [
                                         ft.Image(
-                                            src=images_path + "/Event.png",  
+                                            src=os.path.join(images_path, "Event.png"),
                                             fit="cover",
                                             width=80,
                                             height=80,
@@ -171,7 +174,7 @@ def main(page: ft.Page):
                                 content=ft.Row(
                                     [
                                         ft.Image(
-                                            src=images_path + "/EventTwo.jpg",  
+                                            src=os.path.join(images_path, "EventTwo.jpg"),
                                             fit="cover",
                                             width=80,
                                             height=80,
@@ -207,6 +210,7 @@ def main(page: ft.Page):
         padding=15,
     )
 
+    
     bio_section = ft.Container(
         content=ft.Column(
             [
@@ -232,6 +236,7 @@ def main(page: ft.Page):
         padding=15,
     )
 
+    
     interest_section = ft.Container(
         content=ft.Column(
             [
@@ -290,6 +295,7 @@ def main(page: ft.Page):
         padding=15,
     )
 
+   
     bottom_nav = ft.Container(
         content=ft.Row(
             [
@@ -306,6 +312,7 @@ def main(page: ft.Page):
         shadow=ft.BoxShadow(blur_radius=10, color="#00000022"),
     )
 
+    
     page.add(
         ft.Column(
             [
@@ -314,7 +321,7 @@ def main(page: ft.Page):
                 event_section,
                 bio_section,
                 interest_section,
-                bottom_nav, 
+                bottom_nav,
             ],
             spacing=10,
         )
