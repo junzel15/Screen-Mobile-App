@@ -2,14 +2,15 @@ import flet as ft
 import os
 
 def main(page: ft.Page):
+
     page.title = "Profile Screen"
     page.padding = 0
     page.scroll = "adaptive"
     page.bgcolor = "#F8F9FA"
-    
-    images_path = "static/images"
 
-   
+    images_path = os.path.join(os.getcwd(), "static", "images")
+
+  
     profile_header = ft.Container(
         content=ft.Column(
             [
@@ -127,7 +128,7 @@ def main(page: ft.Page):
         padding=15,
     )
 
-
+  
     event_section = ft.Container(
         content=ft.Column(
             [
@@ -210,7 +211,7 @@ def main(page: ft.Page):
         padding=15,
     )
 
-    
+
     bio_section = ft.Container(
         content=ft.Column(
             [
@@ -236,7 +237,6 @@ def main(page: ft.Page):
         padding=15,
     )
 
-    
     interest_section = ft.Container(
         content=ft.Column(
             [
@@ -295,7 +295,7 @@ def main(page: ft.Page):
         padding=15,
     )
 
-   
+ 
     bottom_nav = ft.Container(
         content=ft.Row(
             [
