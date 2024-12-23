@@ -12,204 +12,214 @@ def main(page: ft.Page):
 
   
     profile_header = ft.Container(
-        content=ft.Column(
-            [
-                ft.Container(
-                    content=ft.Image(
-                        src=os.path.join(images_path, "home-image.jpg"),
-                        width=100,
-                        height=100,
-                        fit=ft.ImageFit.COVER,
-                        border_radius=50,
-                    ),
-                    alignment=ft.alignment.center,
-                ),
-                ft.Row(
-                    [
-                        ft.Text("Elvis Bogsangit Jr.", size=20, weight="bold"),
-                        ft.Icon(ft.icons.VERIFIED, color="#1DA1F2", size=18),
-                    ],
-                    alignment="center",
-                ),
-                ft.Container(
-                    content=ft.Text(
-                        "Pagadian, Philippines",
-                        size=14,
-                        color="#6C757D",
-                        text_align="center",
-                    ),
-                    alignment=ft.alignment.center,
-                ),
-                ft.Row(
-                    [
-                        ft.Text("350 Following", size=14, color="#6C757D"),
-                        ft.Text(" • ", size=14, color="#6C757D"),
-                        ft.Text("647 Followers", size=14, color="#6C757D"),
-                    ],
-                    alignment="center",
-                ),
-                ft.Row(
-                    [
-                        ft.ElevatedButton(
-                            "Make Event",
-                            style=ft.ButtonStyle(
-                                bgcolor="#00A1FF",
-                                shape=ft.RoundedRectangleBorder(radius=8),
-                                padding=ft.Padding(20, 10, 20, 10),
-                                color="white",
+    content=ft.Column(
+        [
+            
+            ft.Row(
+                [
+                    
+                    ft.Row(
+                        [
+                            ft.Icon(
+                                name=ft.Icons.ARROW_BACK,  
+                                size=24,
+                                color="black",  
                             ),
-                        ),
-                        ft.OutlinedButton(
-                            "Edit Profile",
-                            style=ft.ButtonStyle(
-                                side=ft.BorderSide(1, "#00A1FF"),
-                                shape=ft.RoundedRectangleBorder(radius=8),
-                                padding=ft.Padding(20, 10, 20, 10),
+                            ft.Text(
+                                "Profile",
+                                size=18,
+                                weight="bold",
                             ),
-                        ),
-                    ],
-                    alignment="center",
-                    spacing=20,
+                        ],
+                        alignment="start", 
+                        vertical_alignment="center",
+                    ),
+                    
+                    ft.Icon(
+                        name=ft.Icons.MORE_VERT,  
+                        size=24,
+                        color="black",  
+                    ),
+                ],
+                alignment="spaceBetween",  
+                vertical_alignment="center",
+            ),
+            
+            ft.Container(
+                content=ft.Image(
+                    src=os.path.join(images_path, "profile.jpg"),
+                    width=100,
+                    height=100,
+                    fit=ft.ImageFit.COVER,
+                    border_radius=50,
                 ),
-            ],
-            spacing=10,
-            alignment="center",
-        ),
-        padding=15,
-        alignment=ft.alignment.center,
-    )
+                alignment=ft.alignment.center,
+            ),
+            
+            ft.Container(
+                content=ft.Image(
+                    src=os.path.join(images_path, "Group 33832.png"),  
+                    width=80,  
+                    fit=ft.ImageFit.CONTAIN,
+                ),
+                alignment=ft.alignment.center,
+            ),
+            
+            ft.Row(
+                [
+                    ft.Text("CJ Agpaoa", size=20, weight="bold"),
+                    ft.Icon(ft.Icons.VERIFIED, color="#1DA1F2", size=18),
+                ],
+                alignment="center",
+            ),
+            
+            ft.Container(
+                content=ft.Image(
+                    src=os.path.join(images_path, "Group 33817.png"),
+                    width=150,  
+                    fit=ft.ImageFit.CONTAIN,
+                ),
+                alignment=ft.alignment.center,
+            ),
+            
+            ft.Container(
+                content=ft.Image(
+                    src=os.path.join(images_path, "Group 33839.png"),
+                    width=200,  
+                    fit=ft.ImageFit.CONTAIN,
+                ),
+                alignment=ft.alignment.center,
+            ),
+            
+            ft.Row(
+                [
+                    ft.Container(
+                        content=ft.Image(
+                            src=os.path.join(images_path, "action_1.png"),
+                            width=120,  
+                            fit=ft.ImageFit.CONTAIN,
+                        ),
+                    ),
+                    ft.Container(
+                        content=ft.Image(
+                            src=os.path.join(images_path, "Actions.png"),
+                            width=120,  
+                            fit=ft.ImageFit.CONTAIN,
+                        ),
+                    ),
+                ],
+                alignment="center",
+                spacing=20,
+            ),
+        ],
+        spacing=10,
+        alignment="center",
+    ),
+    padding=15,
+    alignment=ft.alignment.center,
+)
+
+
+
 
 
     friend_list_section = ft.Container(
         content=ft.Column(
-            [
-                ft.Row(
-                    [
-                        ft.Text("Friend List", size=16, weight="bold"),
-                        ft.TextButton("See all", on_click=lambda _: print("Friend list")),
-                    ],
-                    alignment="spaceBetween",
-                ),
-                ft.Row(
-                    spacing=10,
-                    controls=[
-                        ft.Container(
-                            content=ft.Image(
-                                src=os.path.join(images_path, "friendOne.jpg"),
-                                width=50,
-                                height=50,
-                                fit=ft.ImageFit.COVER,
-                                border_radius=25,
-                            ),
+        [
+            ft.Row(
+                [
+                    ft.Text("Friend List", size=16, weight="bold"),
+                    
+                    ft.Container(
+                        content=ft.Image(
+                            src=os.path.join(images_path, "Group 33791.png"),
+                            fit=ft.ImageFit.CONTAIN,
                         ),
-                        ft.Container(
-                            content=ft.Image(
-                                src=os.path.join(images_path, "friendTwo.jpg"),
-                                width=50,
-                                height=50,
-                                fit=ft.ImageFit.COVER,
-                                border_radius=25,
-                            ),
-                        ),
-                        ft.Container(
-                            content=ft.Image(
-                                src=os.path.join(images_path, "friendThree.jpg"),
-                                width=50,
-                                height=50,
-                                fit=ft.ImageFit.COVER,
-                                border_radius=25,
-                            ),
-                        ),
-                    ],
-                    alignment="start",
-                ),
-            ],
-        ),
-        padding=15,
-    )
-
-  
-    event_section = ft.Container(
-        content=ft.Column(
-            [
-                ft.Row(
-                    [
-                        ft.Text("Events", size=16, weight="bold"),
-                        ft.TextButton("See all", on_click=lambda _: print("Events list")),
-                    ],
-                    alignment="spaceBetween",
-                ),
-                ft.Container(
-                    content=ft.Row(
-                        [
-                            ft.Container(
-                                content=ft.Row(
-                                    [
-                                        ft.Image(
-                                            src=os.path.join(images_path, "Event.png"),
-                                            fit="cover",
-                                            width=80,
-                                            height=80,
-                                        ),
-                                        ft.Column(
-                                            [
-                                                ft.Text(
-                                                    "Circuit Mega Festival - 2024",
-                                                    weight="bold",
-                                                    size=14,
-                                                ),
-                                                ft.Text("Makati City", size=12, color="#6C757D"),
-                                            ],
-                                            alignment="start",
-                                            spacing=5,
-                                        ),
-                                    ],
-                                    spacing=10,
-                                ),
-                                border_radius=8,
-                                bgcolor="#FFFFFF",
-                                padding=10,
-                                shadow=ft.BoxShadow(blur_radius=4, spread_radius=1, color="#00000022"),
-                            ),
-                            ft.Container(
-                                content=ft.Row(
-                                    [
-                                        ft.Image(
-                                            src=os.path.join(images_path, "EventTwo.jpg"),
-                                            fit="cover",
-                                            width=80,
-                                            height=80,
-                                        ),
-                                        ft.Column(
-                                            [
-                                                ft.Text(
-                                                    "Summer Beach Party - 2024",
-                                                    weight="bold",
-                                                    size=14,
-                                                ),
-                                                ft.Text("Boracay, Philippines", size=12, color="#6C757D"),
-                                            ],
-                                            alignment="start",
-                                            spacing=5,
-                                        ),
-                                    ],
-                                    spacing=10,
-                                ),
-                                border_radius=8,
-                                bgcolor="#FFFFFF",
-                                padding=10,
-                                shadow=ft.BoxShadow(blur_radius=4, spread_radius=1, color="#00000022"),
-                            ),
-                        ],
-                        spacing=20,
+                        on_click=lambda _: print("Friend list clicked"),
                     ),
-                    padding=15,
+                ],
+                alignment="spaceBetween",
+            ),
+            ft.Row(
+                spacing=10,
+                controls=[
+                    ft.Container(
+                        content=ft.Image(
+                            src=os.path.join(images_path, "friendOne.jpg"),
+                            width=50,
+                            height=50,
+                            fit=ft.ImageFit.COVER,
+                            border_radius=25,
+                        ),
+                    ),
+                    ft.Container(
+                        content=ft.Image(
+                            src=os.path.join(images_path, "friendTwo.jpg"),
+                            width=50,
+                            height=50,
+                            fit=ft.ImageFit.COVER,
+                            border_radius=25,
+                        ),
+                    ),
+                    ft.Container(
+                        content=ft.Image(
+                            src=os.path.join(images_path, "friendThree.jpg"),
+                            width=50,
+                            height=50,
+                            fit=ft.ImageFit.COVER,
+                            border_radius=25,
+                        ),
+                    ),
+                ],
+                alignment="start",
+            ),
+        ],
+    ),
+     padding=15,
+ )
+
+    event_section = ft.Container(
+    content=ft.Column(
+        [
+            ft.Row(
+                [
+                    ft.Text("Events", size=16, weight="bold"),
+                    ft.Container(
+                        content=ft.Image(
+                            src=os.path.join(images_path, "Group 33791.png"),
+                            fit=ft.ImageFit.CONTAIN,
+                        ),
+                        on_click=lambda _: print("Events list clicked"),
+                    ),
+                ],
+                alignment="spaceBetween",
+            ),
+            ft.Container(
+                content=ft.Row(
+                    [
+                        ft.Container(
+                            content=ft.Image(
+                                src=os.path.join(images_path, "Group 33741.png"),
+                                fit=ft.ImageFit.COVER,
+                                width=350,  
+                                height=200,  
+                            ),
+                            alignment=ft.alignment.center,  
+                            padding=ft.padding.all(5),  
+                        ),
+                    ],
+                    alignment="start",  
+                    spacing=10,  
                 ),
-            ],
-            spacing=10,
-        ),
-        padding=15,
-    )
+                padding=ft.padding.all(10),  
+            ),
+        ],
+        spacing=10, 
+    ),
+    padding=ft.padding.all(10),  
+)
+
+
 
 
     bio_section = ft.Container(
@@ -238,62 +248,75 @@ def main(page: ft.Page):
     )
 
     interest_section = ft.Container(
-        content=ft.Column(
-            [
-                ft.Row(
-                    [
-                        ft.Text("My Interests", size=16, weight="bold"),
-                        ft.IconButton(icon=ft.icons.EDIT, icon_size=18),
-                    ],
-                    alignment="spaceBetween",
-                ),
-                ft.Row(
-                    wrap=True,
-                    spacing=10,
-                    controls=[
-                        ft.Container(
-                            content=ft.Text("Online Games", color="white"),
-                            padding=10,
-                            border_radius=15,
-                            bgcolor="#FF6347",
+    content=ft.Column(
+        [
+            ft.Row(
+                [
+                    ft.Text("My Interests", size=16, weight="bold"),
+                    ft.IconButton(icon=ft.icons.EDIT, icon_size=18),
+                ],
+                alignment="spaceBetween",
+            ),
+            ft.Row(
+                wrap=True,
+                spacing=10,
+                controls=[
+                    
+                    ft.Container(
+                        content=ft.Image(
+                            src=os.path.join(images_path, "Frame 18781.png"),
+                            fit=ft.ImageFit.CONTAIN,
                         ),
-                        ft.Container(
-                            content=ft.Text("Concert", color="white"),
-                            padding=10,
-                            border_radius=15,
-                            bgcolor="#FFD700",
+                    
+                    ),
+                    ft.Container(
+                        content=ft.Image(
+                            src=os.path.join(images_path, "Frame 18782.png"),
+                            fit=ft.ImageFit.CONTAIN,
                         ),
-                        ft.Container(
-                            content=ft.Text("Music", color="white"),
-                            padding=10,
-                            border_radius=15,
-                            bgcolor="#32CD32",
+                       
+                        
+                    ),
+                    ft.Container(
+                        content=ft.Image(
+                            src=os.path.join(images_path, "Frame 18783.png"),
+                            fit=ft.ImageFit.CONTAIN,
                         ),
-                        ft.Container(
-                            content=ft.Text("Art", color="white"),
-                            padding=10,
-                            border_radius=15,
-                            bgcolor="#8A2BE2",
+                      
+                        
+                    ),
+                    ft.Container(
+                        content=ft.Image(
+                            src=os.path.join(images_path, "Frame 18785.png"),
+                            fit=ft.ImageFit.CONTAIN,
                         ),
-                        ft.Container(
-                            content=ft.Text("Movie", color="white"),
-                            padding=10,
-                            border_radius=15,
-                            bgcolor="#00BFFF",
+                      
+                        
+                    ),
+                    ft.Container(
+                        content=ft.Image(
+                            src=os.path.join(images_path, "Frame 18784.png"),
+                            fit=ft.ImageFit.CONTAIN,
                         ),
-                        ft.Container(
-                            content=ft.Text("Coffee", color="white"),
-                            padding=10,
-                            border_radius=15,
-                            bgcolor="#FF4500",
+                    
+                      
+                    ),
+                    ft.Container(
+                        content=ft.Image(
+                            src=os.path.join(images_path, "Frame 18786.png"),
+                            fit=ft.ImageFit.CONTAIN,
                         ),
-                    ],
-                ),
-            ],
-            spacing=5,
-        ),
-        padding=15,
-    )
+                      
+                        
+                    ),
+                ],
+            ),
+        ],
+        spacing=5,
+    ),
+    padding=15,
+)
+
 
  
     bottom_nav = ft.Container(
